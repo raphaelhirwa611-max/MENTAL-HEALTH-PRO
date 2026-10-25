@@ -3,6 +3,25 @@ const focusLabel = document.getElementById('focusLabel');
 const planButton = document.getElementById('planButton');
 const planList = document.getElementById('planList');
 
+const contactInfo = {
+  email: 'raphaelhirwa611@gmail.com',
+  whatsapp: '0798623350',
+  whatsappLink: 'https://wa.me/254798623350'
+};
+
+const aboutEmail = document.getElementById('aboutEmail');
+const aboutWhatsapp = document.getElementById('aboutWhatsapp');
+
+if (aboutEmail) {
+  aboutEmail.href = `mailto:${contactInfo.email}`;
+  aboutEmail.textContent = contactInfo.email;
+}
+
+if (aboutWhatsapp) {
+  aboutWhatsapp.href = contactInfo.whatsappLink;
+  aboutWhatsapp.textContent = `WhatsApp: ${contactInfo.whatsapp}`;
+}
+
 const plans = {
   Alcohol: [
     'Stop all access to alcohol and reduce triggers in your environment.',
